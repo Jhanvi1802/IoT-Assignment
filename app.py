@@ -3,9 +3,9 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime, timedelta
 
-st.set_page_config(page_title="Kiln Monitoring Dashboard", layout="wide")
+st.set_page_config(page_title=" Monitoring Dashboard", layout="wide")
 
-st.title("Kiln IoT Monitoring – Historical Data")
+st.title("IoT Monitoring – Historical Data")
 st.write("Historical visualization of sensor data collected from the kiln monitoring system.")
 
 # -------------------------------------------------
@@ -61,9 +61,9 @@ for col in [temp_col, hum_col, gas_col]:
 TEMP_LIMIT = 450
 
 if data[temp_col].max() > TEMP_LIMIT:
-    st.error("🚨 ALERT: Kiln temperature exceeded 450°C")
+    st.error("ALERT: Kiln temperature exceeded 450°C")
 else:
-    st.success("✅ Kiln temperature is within safe operating limits")
+    st.success("Kiln temperature is within safe operating limits")
 
 # -------------------------------------------------
 # KPI Metrics
